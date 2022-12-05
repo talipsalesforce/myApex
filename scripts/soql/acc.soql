@@ -1,0 +1,12 @@
+select id, name  from Account
+
+select id, name, CreatedDate from account order by CreatedDate desc limit 3
+
+select id, name, phone from account where phone != null
+
+SELECT  name, Id, phone, accountnumber, active__c, shippingCity from account where phone != null and accountnumber != null
+
+SELECT  name, Id, phone, accountnumber, active__c, shippingCity, website from account where (phone != null or website != null) and accountnumber != null
+
+select id, name, subject__c, status__c, priority__c from salesforce_ticket__c where status__c != '' and priority__c != 'low'
+select id, name, subject__c, status__c, priority__c from salesforce_ticket__c where status__c != '' and priority__c in ('high', 'low','')

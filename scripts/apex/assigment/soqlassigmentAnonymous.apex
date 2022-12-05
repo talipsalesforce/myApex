@@ -1,0 +1,2 @@
+SoqlAssigment.soqlParent();
+
