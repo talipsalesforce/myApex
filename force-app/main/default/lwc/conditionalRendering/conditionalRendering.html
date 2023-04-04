@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button 
+            variant="brand" 
+            label= {labelButton}
+            onclick= {clickHandler}>
+            </lightning-button>
+            <template lwc:if = {showContent}>
+              <div> I am the so colled content.</div>  
+            </template>
+        </div>
+       
+    </lightning-card>
+    
+</template>

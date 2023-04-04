@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Conditional Rendering11">
+        <div class="slds-m-around_medium">
+            <lightning-input type="checkbox" label="Show Details" onchange={handleChange}>
+            </lightning-input>
+            <template lwc:if={areDetailsVisible}>
+                <div class="slds-m-around_medium">
+                    <lightning-input type="text" label="first name" onchange={handleChange}>
+                    </lightning-input>
+                    <lightning-input type="text" label="Enter City" onchange={handleChange}>
+                    </lightning-input>
+                    These are the details.<br>
+                    I am {firstName}<br>
+                    I am from {location.city}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
