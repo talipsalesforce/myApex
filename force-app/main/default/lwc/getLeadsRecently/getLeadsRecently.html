@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="GET LEADS RECENTLY" icon-name="standard:lead">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+                variant="brand" 
+                label="Recent Leads" 
+                onclick={handleClick} class="slds-m-left_x-small">
+        </lightning-button>
+        </div>
+        <div class="slds-var-m-around_medium">
+             <lightning-datatable
+                    key-field="id"
+                    data={leadsList}
+                    columns={columns}>>
+             </lightning-datatable>  
+        </div>  
+    </lightning-card>
+</template>

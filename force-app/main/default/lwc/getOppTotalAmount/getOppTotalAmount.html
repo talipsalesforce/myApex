@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Opportunity total by stage" icon-name="standard:opportunity">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Stage a stage"
+                placeholder="picklist değerini seçiniz..."
+                options={stageNameOptions}
+                onchange={handleChange}>
+            </lightning-combobox> 
+            <div class="slds-var-m-around_medium">
+                <template if:true={totalAmount}>
+                    Total Amount:  <strong>{totalAmount}</strong>
+                </template>
+                <template if:true={error}>
+                    <strong>{error}</strong>
+                </template>
+            </div>  
+        </div>
+    </lightning-card>
+</template>
